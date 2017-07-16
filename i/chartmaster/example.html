@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <title>jOrgChart - A jQuery OrgChart Plugin</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/jquery.jOrgChart.css"/>
+    <link rel="stylesheet" href="css/custom.css"/>
+    <link href="css/prettify.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="prettify.js"></script>
+    <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="jquery-ui.min.js"></script>
+    <script src="jquery.jOrgChart.js"></script>
+
+    <script>
+    jQuery(document).ready(function() {
+        $("#org").jOrgChart({
+            chartElement : '#chart',
+            dragAndDrop  : true
+        });
+    });
+    </script>
+	<STYLE type="text/css">
+		td{text-align:center; height:18px;}
+	</STYLE>
+  </head>
+
+  <body onload="prettyPrint();">
+    <ul id="org" style="display:none">
+    <li>
+       Food
+       <ul>
+         <li>Vegetables
+           <a href="http://wesnolte.com" target="_blank">Click me</a>
+           <ul>
+             <li>Pumpkin
+				<ul>
+					<li>2121</li>
+					<li>21212</li>
+				</ul>
+			 </li>
+             <li>
+                <table width="100">
+					<tr><td colspan="3" align="center"><a href="" title="">设置信息</a></td></tr>
+					<tr><td>100</td><td>总</td><td>300</td></tr>
+					<tr><td>100</td><td>新</td><td>200</td></tr>
+                </table>
+				<ul>
+					<li>2121</li>
+					<li>21212</li>
+				</ul>
+             </li>
+           </ul>
+         </li>
+         <li class="fruit">Fruit
+           <ul>
+             <li>Apple
+               <ul>
+                 <li>Granny Smith</li>
+				 <li>Granny Smiths</li>
+               </ul>
+             </li>
+             <li>Berries
+               <ul>
+                 <li>Blueberry</li>
+                 <li>Cucumber</li>
+               </ul>
+             </li>
+           </ul>
+         </li>
+       </ul>
+     </li>
+   </ul>            
+    
+    <div id="chart" class="orgChart"></div>
+    
+    
+
+</body>
+</html>
